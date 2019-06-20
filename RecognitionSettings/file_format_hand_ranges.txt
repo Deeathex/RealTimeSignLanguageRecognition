@@ -1,0 +1,3 @@
+[min_YCrCb, max_YCrCb]
+where min_YCrCb and max_YCrCb are vectors of [ a b c ]
+with a, b, c from [0, 255]

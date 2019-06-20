@@ -1,6 +1,7 @@
 import cv2
 import glob
 import os
+import pickle
 
 import constants as constant
 from tensorflow.python.keras.preprocessing import image
@@ -9,7 +10,7 @@ import numpy as np
 
 def get_max_contour(contours, min_area=200):
     """
-    Get the biggest contour
+    Gets the biggest contour
     :param contours: a vector with coordinates for the contour
     :param min_area:
     :return: the maximum possible contour
@@ -26,7 +27,7 @@ def get_max_contour(contours, min_area=200):
 
 def get_letter_based_on_prediction(result):
     """
-    Get the corresponding letter from alphabet based on prediction result
+    Gets the corresponding letter from alphabet based on prediction result
     :param result: a vector hot-encoded for alphabet letters
     :return: the corresponding letter
     """
@@ -45,7 +46,7 @@ def get_letter_based_on_prediction(result):
 
 def get_prediction(test_image, classifier):
     """
-    Give a result based on the CNN model
+    Gives a result based on the CNN model
     :param test_image: image to be predicted
     :param classifier: the model cladssifier
     :return: the corresponding result for the image
@@ -56,7 +57,7 @@ def get_prediction(test_image, classifier):
     return get_letter_based_on_prediction(result)
 
 
-def save_image_from_frame(image_to_save,image_filename, image_format='.JPG', ):
+def save_image_from_frame(image_to_save, image_filename, image_format='.JPG', ):
     image_to_be_saved = cv2.resize(image_to_save, (50, 50))
     cv2.imwrite(constant.SAVED_IMAGES_DIRECTORY + image_filename + image_format,
                 image_to_be_saved)
@@ -64,7 +65,7 @@ def save_image_from_frame(image_to_save,image_filename, image_format='.JPG', ):
 
 def flip_images_from(directory, images_format='.JPG', start_name_image=2500):
     """
-    Flip all images vertical (Oy axis) from the given directory
+    Flips all images vertical (Oy axis) from the given directory
     :param directory: directory with containing images
     :param images_format: one of JPG, PNG, JPEG, etc
     :param start_name_image: the number to start image indexing, as an example, the first would be 2500.JPG, the second
@@ -82,7 +83,7 @@ def flip_images_from(directory, images_format='.JPG', start_name_image=2500):
 def rename_images_from(directory=constant.SAVED_IMAGES_DIRECTORY, images_format='.JPG', start_name_image=2500,
                        delete_images_after_rename=False):
     """
-    Rename all images from given directory
+    Renames all images from given directory
     :param directory: directory with containing images
     :param images_format: one of JPG, PNG, JPEG, etc
     :param start_name_image: the number to start image indexing, as an example, the first would be 2500.JPG, the second
@@ -111,7 +112,7 @@ def rename_images_from(directory=constant.SAVED_IMAGES_DIRECTORY, images_format=
 
 def scale_images_from(directory, images_format='.JPG', new_size=(50, 50)):
     """
-    Scale images from given directory
+    Scales images from given directory
     :param directory: directory with containing images
     :param images_format: one of JPG, PNG, JPEG, etc
     :param new_size: a pair (x,y) where x and y represents the width and height of the new images
@@ -130,3 +131,46 @@ def scale_images_from(directory, images_format='.JPG', new_size=(50, 50)):
         new_image = cv2.resize(original_image, dsize=new_size)
         cv2.imwrite(image_names[i], new_image)
         i += 1
+
+
+def load_hand_histogram_from(filename):
+    """
+    Loads the hand histogram calculated by the calculate_histogram_module
+    :return: the histogram
+    """
+    return load_file_from(constant.HISTOGRAM_DIRECTORY + filename)
+
+
+def load_ranges_hand_settings_from(filename):
+    """
+    Loads the hand ranges calculated by the calculate_hand_ranges_settings module
+    :return: the hand ranges
+    """
+    path = constant.RECOGNITION_SETTINGS + filename
+    file_exists = os.path.isfile(path)
+    ranges = load_file_from(path)
+    if not file_exists or ranges is None or ranges is '':
+        skin_ycrcb_min = constant.SKIN_YCRCB_MIN_DEFAULT
+        skin_ycrcb_max = constant.SKIN_YCRCB_MAX_DEFAULT
+        ranges = skin_ycrcb_min, skin_ycrcb_max
+    return ranges[0], ranges[1]
+
+
+def load_file_from(path):
+    """
+    Loads a file from the corresponding path
+    :param path: the absolute path to the file
+    :return: the content of the file
+    """
+    with open(path, "rb") as f:
+        file = pickle.load(f)
+    return file
+
+
+def keras_process_image(img):
+    image_x = 50
+    image_y = 50
+    img = cv2.resize(img, (image_x, image_y))
+    img = np.array(img, dtype=np.float32)
+    img = np.reshape(img, (1, image_x, image_y, 1))
+    return img
