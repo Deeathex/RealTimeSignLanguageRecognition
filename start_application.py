@@ -6,9 +6,9 @@ import keyboard
 import utils as ut
 
 
-class Controller:
+class SignLanguageRecognition:
     def __init__(self):
-        self.gesture_recognition = gest_rec.GestureRecognition('model_saved_2019-06-19.h5')
+        self.__gesture_recognition = gest_rec.GestureRecognition('model_saved_2019-06-19.h5')
 
     def run(self):
         video_capture = cv2.VideoCapture(0)
@@ -17,19 +17,21 @@ class Controller:
         old_result = ""
 
         ret, last_frame = video_capture.read()
-        last_frame_hand = self.gesture_recognition.get_hand_rectangle(last_frame)
+        last_frame_hand = self.__gesture_recognition.get_hand_rectangle(last_frame)
         while video_capture.isOpened():
             # Capture frame-by-frame
             ret, frame = video_capture.read()
             frames += 1
 
-            hand_rectangle = self.gesture_recognition.get_hand_rectangle(frame)
+            hand_rectangle = self.__gesture_recognition.get_hand_rectangle(frame)
 
             current_frame_hand = hand_rectangle
-            motion = self.gesture_recognition.detect_motion(last_frame_hand, current_frame_hand, frames)
+            motion = self.__gesture_recognition.detect_motion(last_frame_hand, current_frame_hand, frames, thresh=10)
             last_frame_hand = current_frame_hand
 
-            mask, contour = self.gesture_recognition.get_contour(hand_rectangle)
+            mask, contour = self.__gesture_recognition.get_mask_and_contour(hand_rectangle)
+
+            self.__gesture_recognition.bounding_hand(contour)
 
             # Display the resulting frame
             cv2.imshow('Video', hand_rectangle)
@@ -42,7 +44,7 @@ class Controller:
             if frames == 30:
                 frames = 0
 
-                current_result = self.gesture_recognition.recognize()
+                current_result = self.__gesture_recognition.recognize()
                 if current_result != old_result:
                     if current_result == '[':
                         current_result = 'Ă'
@@ -71,5 +73,5 @@ class Controller:
         cv2.destroyAllWindows()
 
 
-controller = Controller()
-controller.run()
+sign_language_recognition = SignLanguageRecognition()
+sign_language_recognition.run()

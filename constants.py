@@ -7,3 +7,4 @@ HISTOGRAM_DIRECTORY = 'C:/Users/Deeathex/PycharmProjects/RealTimeSignLanguageRec
 RECOGNITION_SETTINGS = 'C:/Users/Deeathex/PycharmProjects/RealTimeSignLanguageRecognition/RecognitionSettings/'
 SKIN_YCRCB_MIN_DEFAULT = np.array((0, 50, 67))
 SKIN_YCRCB_MAX_DEFAULT = np.array((255, 173, 130))
+MIN_AREA_TO_BE_MOTION = 4000

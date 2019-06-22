@@ -10,9 +10,12 @@ import numpy as np
 
 def get_max_contour(contours, min_area=200):
     """
-    Gets the biggest contour
+    Gets the biggest contour from the contours in image, also bigger than the provided
+     min_area threshold (this means motion)
     :param contours: a vector with coordinates for the contour
-    :param min_area:
+    :param min_area: a threshold necessary to avoid false-positives due to lightning conditions
+    if the biggest contour found in image is less than the min_area, it would be ignores because is just noise
+    or change in lightning conditions
     :return: the maximum possible contour
     """
     max_contour = None
@@ -57,7 +60,7 @@ def get_prediction(test_image, classifier):
     return get_letter_based_on_prediction(result)
 
 
-def save_image_from_frame(image_to_save, image_filename, image_format='.JPG', ):
+def save_image_from_frame(image_to_save, image_filename, image_format='.JPG'):
     image_to_be_saved = cv2.resize(image_to_save, (50, 50))
     cv2.imwrite(constant.SAVED_IMAGES_DIRECTORY + image_filename + image_format,
                 image_to_be_saved)
@@ -144,7 +147,8 @@ def load_hand_histogram_from(filename):
 def load_ranges_hand_settings_from(filename):
     """
     Loads the hand ranges calculated by the calculate_hand_ranges_settings module
-    :return: the hand ranges
+    :param filename: the filename where ranges can be found
+    :return: the ranges from file or some default ranges if file doesn't exists or file is corrupted
     """
     path = constant.RECOGNITION_SETTINGS + filename
     file_exists = os.path.isfile(path)
@@ -168,9 +172,25 @@ def load_file_from(path):
 
 
 def keras_process_image(img):
+    """
+    Process and image for keras
+    :param img: the image to be processed
+    :return: the image ready to be fed to keras model
+    """
     image_x = 50
     image_y = 50
     img = cv2.resize(img, (image_x, image_y))
     img = np.array(img, dtype=np.float32)
     img = np.reshape(img, (1, image_x, image_y, 1))
     return img
+
+
+def get_YCrCb_image(hand_rectangle):
+    """
+    Gets the YCrCb image of the hand
+    :param hand_rectangle: the hand area that would be processed
+    :return: the image from BGR to YCrCb with gaussian blur
+    """
+    image_ycrcb = cv2.cvtColor(hand_rectangle, cv2.COLOR_BGR2YCR_CB)
+    blur = cv2.GaussianBlur(image_ycrcb, (11, 11), 0)
+    return blur
