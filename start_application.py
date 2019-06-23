@@ -1,5 +1,7 @@
 import cv2
 
+from threading import Thread
+
 import gestures_recognition as gest_rec
 import keyboard
 
@@ -14,10 +16,15 @@ class SignLanguageRecognition:
         video_capture = cv2.VideoCapture(0)
         frames = 0
         images_saved_count = 0
-        old_result = ""
+        current_result = ''
+        old_result = ''
+
+        is_voice_on = True
 
         ret, last_frame = video_capture.read()
         last_frame_hand = self.__gesture_recognition.get_hand_rectangle(last_frame)
+        same_prediction = 0
+        text = ''
         while video_capture.isOpened():
             # Capture frame-by-frame
             ret, frame = video_capture.read()
@@ -34,6 +41,12 @@ class SignLanguageRecognition:
             self.__gesture_recognition.bounding_hand(contour)
 
             # Display the resulting frame
+            frame_without_text = frame
+            if len(text) == 51:
+                frame = frame_without_text
+                text = ''
+
+            ut.show_blackboard_with_text(frame, text, is_voice_on)
             cv2.imshow('Video', hand_rectangle)
             cv2.imshow('Mask', mask)
             cv2.imshow('Frame', frame)
@@ -46,6 +59,7 @@ class SignLanguageRecognition:
 
                 current_result = self.__gesture_recognition.recognize()
                 if current_result != old_result:
+                    same_prediction = 0
                     if current_result == '[':
                         current_result = 'Ă'
                     elif current_result == '\\':
@@ -60,6 +74,13 @@ class SignLanguageRecognition:
                         current_result = 'Z'
                     print("Result: ", current_result)
                     old_result = current_result
+                else:
+                    same_prediction += 1
+
+            if same_prediction >= 5:
+                text += current_result
+                same_prediction = 0
+                Thread(target=ut.say_text_romanian, args=(text, is_voice_on,)).start()
 
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
@@ -67,6 +88,11 @@ class SignLanguageRecognition:
             if keyboard.is_pressed('s'):
                 ut.save_image_from_frame(mask, images_saved_count)
                 images_saved_count += 1
+
+            if keyboard.is_pressed('v') and is_voice_on:
+                is_voice_on = False
+            elif keyboard.is_pressed('v') and not is_voice_on:
+                is_voice_on = True
 
         # When everything is done, release the capture
         video_capture.release()

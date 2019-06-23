@@ -3,6 +3,12 @@ import glob
 import os
 import pickle
 
+import pyttsx3
+from gtts import gTTS
+from pygame import mixer
+import playsound
+from random import randint
+
 import constants as constant
 from tensorflow.python.keras.preprocessing import image
 import numpy as np
@@ -51,7 +57,7 @@ def get_prediction(test_image, classifier):
     """
     Gives a result based on the CNN model
     :param test_image: image to be predicted
-    :param classifier: the model cladssifier
+    :param classifier: the model classifier
     :return: the corresponding result for the image
     """
     test_image = image.img_to_array(test_image)
@@ -194,3 +200,55 @@ def get_YCrCb_image(hand_rectangle):
     image_ycrcb = cv2.cvtColor(hand_rectangle, cv2.COLOR_BGR2YCR_CB)
     blur = cv2.GaussianBlur(image_ycrcb, (11, 11), 0)
     return blur
+
+
+def say_text_english(text, is_voice_on):
+    """
+    Says the text given in english
+    :param text: The text to say
+    :param is_voice_on: A flag that shows if the voice is on (True) or off (False)
+    :return: -
+    """
+    engine = pyttsx3.init()
+    engine.setProperty('rate', 150)
+    if not is_voice_on:
+        return
+    while engine._inLoop:
+        pass
+    engine.say(text)
+    engine.runAndWait()
+
+
+def say_text_romanian(text, is_voice_on):
+    """
+    Says the text given in Romanian language
+    :param text: The text to say
+    :param is_voice_on: A flag that shows if the voice is on (True) or off (False)
+    :return: -
+    """
+    while True:
+        try:
+            random_number = randint(0, 10000000)
+            audio_filename = constant.AUDIO_FILES_DIRECTORY + str(random_number) + 'text_to_voice.mp3'
+            if not is_voice_on:
+                return
+            tts = gTTS(text, lang='ro')
+            tts.save(audio_filename)
+
+            # mixer.init()
+            # mixer.music.load(audio_filename)
+            # mixer.music.play()
+            playsound.playsound(audio_filename, True)
+            os.remove(audio_filename)
+            break
+        except PermissionError:
+            pass
+
+
+def show_blackboard_with_text(img, text, is_voice_on):
+    # cv2.putText(img, text, (0, 470), cv2.QT_FONT_NORMAL, 1, (255, 255, 255))
+    cv2.putText(img, text, (0, 470), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255))
+    if is_voice_on:
+        cv2.putText(img, "Voice on", (470, 460), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 127, 0))
+    else:
+        cv2.putText(img, "Voice off", (470, 460), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 127, 0))

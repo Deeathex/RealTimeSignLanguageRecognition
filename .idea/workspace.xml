@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6db28466-8bde-4a2d-8351-432261a31ae6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/calculate_hand_segmentation_range.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/motion_detection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SavedImages/Back_Projection_Theory0.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SavedImages/predict.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/SavedImages/predict.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculate_hand_histogram.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculate_hand_segmentation_range_.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/start_application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gestures_recognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/gestures_recognition.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/histogram.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/metrics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/motion_detection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/start_application.py" beforeDir="false" afterPath="$PROJECT_DIR$/start_application.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/start_application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="46" column="62" selection-start-line="46" selection-start-column="62" selection-end-line="46" selection-end-column="62" />
+            <state relative-caret-position="269">
+              <caret line="48" column="66" lean-forward="true" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -39,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gestures_recognition.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="60" column="39" lean-forward="true" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+            <state relative-caret-position="201">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -48,11 +43,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/calculate_hand_segmentation_range.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1088">
+              <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+            <state relative-caret-position="394">
+              <caret line="249" column="66" selection-start-line="249" selection-start-column="66" selection-end-line="249" selection-end-column="66" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -63,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/constants.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="119">
+              <caret line="7" column="101" selection-start-line="7" selection-start-column="101" selection-end-line="7" selection-end-column="101" />
             </state>
           </provider>
         </entry>
@@ -103,18 +110,19 @@
         <option value="$PROJECT_DIR$/calculate_hand_histogram.py" />
         <option value="$PROJECT_DIR$/TrainData/metrics.py" />
         <option value="$PROJECT_DIR$/histogram.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/RecognitionSettings/file_format_hand_ranges.txt" />
         <option value="$PROJECT_DIR$/controller.py" />
         <option value="$PROJECT_DIR$/signlanguagerecognition.py" />
         <option value="$PROJECT_DIR$/train_model.py" />
         <option value="$PROJECT_DIR$/metrics.py" />
-        <option value="$PROJECT_DIR$/motion_detection.py" />
-        <option value="$PROJECT_DIR$/start_application.py" />
-        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/calculate_hand_segmentation_range_.py" />
-        <option value="$PROJECT_DIR$/constants.py" />
+        <option value="$PROJECT_DIR$/motion_detection.py" />
         <option value="$PROJECT_DIR$/gestures_recognition.py" />
+        <option value="$PROJECT_DIR$/Test_voice_text.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/constants.py" />
+        <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$PROJECT_DIR$/start_application.py" />
       </list>
     </option>
   </component>
@@ -140,22 +148,7 @@
             <path>
               <item name="RealTimeSignLanguageRecognition" type="b2602c69:ProjectViewProjectNode" />
               <item name="RealTimeSignLanguageRecognition" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RealTimeSignLanguageRecognition" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RealTimeSignLanguageRecognition" type="462c0819:PsiDirectoryNode" />
               <item name="ModelMetrics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RealTimeSignLanguageRecognition" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RealTimeSignLanguageRecognition" type="462c0819:PsiDirectoryNode" />
-              <item name="RecognitionSettings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RealTimeSignLanguageRecognition" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RealTimeSignLanguageRecognition" type="462c0819:PsiDirectoryNode" />
-              <item name="SavedImages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -172,14 +165,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Deeathex\PycharmProjects\RealTimeSignLanguageRecognition\ModelMetrics\95_acc" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Deeathex\PycharmProjects\RealTimeSignLanguageRecognition" />
       <recent name="C:\Users\Deeathex\PycharmProjects\RealTimeSignLanguageRecognition\SavedImages" />
       <recent name="C:\Users\Deeathex\PycharmProjects\RealTimeSignLanguageRecognition\Histogram" />
       <recent name="C:\Users\Deeathex\PycharmProjects\RealTimeSignLanguageRecognition\ModelMetrics\98_acc" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Deeathex\PycharmProjects\RealTimeSignLanguageRecognition\ModelMetrics\95_acc" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -194,8 +187,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.calculate_hand_segmentation_range_">
-    <configuration name="calculate_hand_segmentation_range_" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.start_application">
+    <configuration name="Test_voice_text" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RealTimeSignLanguageRecognition" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -208,7 +201,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\Deeathex\PycharmProjects\RealTimeSignLanguageRecognition\calculate_hand_segmentation_range.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test_voice_text.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -217,7 +210,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="gestures_recognition" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="calculate_hand_segmentation_range" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RealTimeSignLanguageRecognition" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -230,29 +223,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gestures_recognition.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="metrics" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="RealTimeSignLanguageRecognition" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/metrics.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/calculate_hand_segmentation_range.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -305,13 +276,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="RealTimeSignLanguageRecognition" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.calculate_hand_segmentation_range_" />
         <item itemvalue="Python.start_application" />
-        <item itemvalue="Python.gestures_recognition" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.Test_voice_text" />
+        <item itemvalue="Python.calculate_hand_segmentation_range" />
         <item itemvalue="Python.motion_detection" />
-        <item itemvalue="Python.metrics" />
       </list>
     </recent_temporary>
   </component>
@@ -327,7 +320,8 @@
       <updated>1560893456860</updated>
       <workItem from="1560893458405" duration="11000" />
       <workItem from="1560894572076" duration="22213000" />
-      <workItem from="1560960888017" duration="56834000" />
+      <workItem from="1560960888017" duration="59836000" />
+      <workItem from="1561312137883" duration="6699000" />
     </task>
     <task id="LOCAL-00001" summary="Commit with some extra functionalities, needs to be removed, but also should have a backup">
       <created>1561038233276</created>
@@ -336,17 +330,24 @@
       <option name="project" value="LOCAL" />
       <updated>1561038233277</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit with motion_detection - should be deleted">
+      <created>1561218405022</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1561218405022</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79058000" />
+    <option name="totallyTimeSpent" value="88759000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -357,11 +358,11 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32936078" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -374,20 +375,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit with some extra functionalities, needs to be removed, but also should have a backup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit with some extra functionalities, needs to be removed, but also should have a backup" />
+    <MESSAGE value="Commit with motion_detection - should be deleted" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit with motion_detection - should be deleted" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$calculate_hand_histogram.coverage" NAME="calculate_hand_histogram Coverage Results" MODIFIED="1560950603498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$gestures_recognition.coverage" NAME="gestures_recognition Coverage Results" MODIFIED="1561204939084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$metrics.coverage" NAME="metrics Coverage Results" MODIFIED="1561043318675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$motion_detection.coverage" NAME="motion_detection Coverage Results" MODIFIED="1561122475415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$motion_detection.coverage" NAME="motion_detection Coverage Results" MODIFIED="1561218487709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$train_model.coverage" NAME="train_model Coverage Results" MODIFIED="1560963475182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$histogram.coverage" NAME="histogram Coverage Results" MODIFIED="1561029648214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$start_application.coverage" NAME="start_application Coverage Results" MODIFIED="1561205630196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$calculate_hand_segmentation_range_.coverage" NAME="calculate_hand_segmentation_range_ Coverage Results" MODIFIED="1561206850017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$test.coverage" NAME="test Coverage Results" MODIFIED="1561034912727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$test.coverage" NAME="test Coverage Results" MODIFIED="1561319691648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$webcam.coverage" NAME="webcam Coverage Results" MODIFIED="1560944000306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$Test_voice_text.coverage" NAME="Test_voice_text Coverage Results" MODIFIED="1561318003371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$start_application.coverage" NAME="start_application Coverage Results" MODIFIED="1561322921456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$calculate_hand_segmentation_range_.coverage" NAME="calculate_hand_segmentation_range_ Coverage Results" MODIFIED="1561206850017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$controller.coverage" NAME="controller Coverage Results" MODIFIED="1561039215566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RealTimeSignLanguageRecognition$calculate_hand_segmentation_range.coverage" NAME="calculate_hand_segmentation_range Coverage Results" MODIFIED="1561231967734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -417,9 +421,10 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="88.5" y="52.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="89.0" y="52.0" />
           <SelectedNodes />
           <Categories />
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -431,11 +436,12 @@
           <nodes />
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="698.5" y="436.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="699.0" y="436.0" />
           <SelectedNodes />
           <Categories>
             <Category>All</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
           <VISIBILITY>Details</VISIBILITY>
         </state>
       </provider>
@@ -448,11 +454,12 @@
           <nodes />
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="698.5" y="436.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="699.0" y="436.0" />
           <SelectedNodes />
           <Categories>
             <Category>All</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
           <VISIBILITY>Details</VISIBILITY>
         </state>
       </provider>
@@ -475,6 +482,7 @@
             <Category>Inner Classes</Category>
             <Category>Fields</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -491,23 +499,18 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="239.5" y="604.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="240.0" y="605.0" />
           <SelectedNodes />
           <Categories>
             <Category>Methods</Category>
             <Category>Inner Classes</Category>
             <Category>Fields</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TrainData/metrics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TrainData/metrics.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/tensorflow/python/keras/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -530,18 +533,16 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="0.8482490272373541" x="7.474770642201861" y="320.70183486238534" />
+          <settings layout="Hierarchic Group" zoom="0.8482490272373541" x="7.0" y="321.0" />
           <SelectedNodes />
           <Categories>
             <Category>Methods</Category>
             <Category>Inner Classes</Category>
             <Category>Fields</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SavedImages/predict.JPG">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/TestData/A/0.JPG">
       <provider selected="true" editor-type-id="images" />
@@ -553,9 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RecognitionSettings/hand_ranges_segmentation_settings.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/RecognitionSettings/file_format_hand_ranges.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -563,26 +561,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/calculate_hand_histogram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-741">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/histogram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding>
-            <element signature="e#1#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/calculate_hand_histogram.py" />
+    <entry file="file://$PROJECT_DIR$/histogram.py" />
     <entry file="file://$PROJECT_DIR$/ModelMetrics/model_accuracy_plot.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -598,13 +578,14 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="0.9837920489296637" x="185.31073460304424" y="646.7612682623562" />
+          <settings layout="Hierarchic Group" zoom="0.9837920489296637" x="185.0" y="647.0" />
           <SelectedNodes />
           <Categories>
             <Category>Methods</Category>
             <Category>Inner Classes</Category>
             <Category>Fields</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -619,13 +600,14 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.5148936170212772" x="338.77540485423765" y="749.7724719101122" />
+          <settings layout="Hierarchic Group" zoom="1.5148936170212772" x="339.0" y="750.0" />
           <SelectedNodes />
           <Categories>
             <Category>Methods</Category>
             <Category>Inner Classes</Category>
             <Category>Fields</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -640,13 +622,14 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.4153465346534653" x="266.74454372823766" y="587.9919552291011" />
+          <settings layout="Hierarchic Group" zoom="1.4153465346534653" x="267.0" y="588.0" />
           <SelectedNodes />
           <Categories>
             <Category>Methods</Category>
             <Category>Inner Classes</Category>
             <Category>Fields</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -661,13 +644,14 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.4000000000000001" x="197.35714285714283" y="558.4285714285714" />
+          <settings layout="Hierarchic Group" zoom="1.4000000000000001" x="197.0" y="558.0" />
           <SelectedNodes />
           <Categories>
             <Category>Methods</Category>
             <Category>Inner Classes</Category>
             <Category>Fields</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -679,13 +663,14 @@
           <nodes />
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="698.5" y="289.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="699.0" y="289.0" />
           <SelectedNodes />
           <Categories>
             <Category>Methods</Category>
             <Category>Inner Classes</Category>
             <Category>Fields</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -697,13 +682,14 @@
           <nodes />
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="698.5" y="289.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="699.0" y="289.0" />
           <SelectedNodes />
           <Categories>
             <Category>Methods</Category>
             <Category>Inner Classes</Category>
             <Category>Fields</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -728,13 +714,14 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="2.1550295857988178" x="200.32930910539295" y="560.7169242415736" />
+          <settings layout="Hierarchic Group" zoom="2.1550295857988178" x="200.0" y="561.0" />
           <SelectedNodes />
           <Categories>
             <Category>Methods</Category>
             <Category>Inner Classes</Category>
             <Category>Fields</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -744,16 +731,6 @@
           <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/motion_detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-422">
-          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -768,27 +745,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/motion_detection.py" />
+    <entry file="file://$PROJECT_DIR$/SavedImages/Back_Projection_Theory0.jpg" />
+    <entry file="file://$PROJECT_DIR$/SavedImages/predict.JPG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecognitionSettings/hand_ranges_segmentation_settings.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/calculate_hand_segmentation_range.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="93" column="86" selection-start-line="93" selection-start-column="86" selection-end-line="93" selection-end-column="86" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/start_application.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="46" column="62" selection-start-line="46" selection-start-column="62" selection-end-line="46" selection-end-column="62" />
+        <state relative-caret-position="1088">
+          <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -797,18 +765,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gestures_recognition.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="60" column="39" lean-forward="true" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+        <state relative-caret-position="201">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Test_voice_text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="101" selection-start-line="7" selection-start-column="101" selection-end-line="7" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="2" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+        <state relative-caret-position="394">
+          <caret line="249" column="66" selection-start-line="249" selection-start-column="66" selection-end-line="249" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/start_application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="48" column="66" lean-forward="true" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
