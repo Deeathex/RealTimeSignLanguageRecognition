@@ -102,12 +102,19 @@ class ConvolutionalNeuralNetworkModel:
                                                       batch_size=32,
                                                       class_mode='categorical')
 
+        print('Validation set loaded')
+        validation_set = train_datagen.flow_from_directory(constant.VALIDATION_DATA_DIRECTORY,
+                                                           target_size=(50, 50),
+                                                           color_mode='grayscale',
+                                                           batch_size=32,
+                                                           class_mode='categorical')
+
         print('Training the network')
         self.__history = self.__classifier.fit_generator(
             train_set,
             steps_per_epoch=500,
             epochs=100,
-            validation_data=train_set,
+            validation_data=validation_set,
             validation_steps=10
         )
 
@@ -128,9 +135,9 @@ class ConvolutionalNeuralNetworkModel:
         self.__classifier.save(constant.MODEL_METRICS_DIRECTORY + 'model_saved_' + date_index + '.h5')
 
 
-model = ConvolutionalNeuralNetworkModel(28)
+model = ConvolutionalNeuralNetworkModel(30)
 model.create()
 # model.create_another_model_99()
 model.summary()
-# model.train()
-# model.save_metrics_and_model()
+model.train()
+model.save_metrics_and_model()

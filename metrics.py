@@ -53,9 +53,9 @@ class Metrics:
         print(self.__history['val_loss'])
 
 
-metrics = Metrics('model_saved_2019-06-19.h5', 'train_history_dict_2019-06-19.txt')
-# metrics.plot_model('plot_model.png')
-# metrics.summarize_history_for_accuracy('model_accuracy_plot.png')
-# metrics.summarize_history_for_loss('model_loss_plot.png')
+metrics = Metrics('model_saved_2019-07-04.h5', 'train_history_dict_2019-07-04.txt')
+metrics.plot_model('plot_model.png')
+metrics.summarize_history_for_accuracy('model_accuracy_plot.png')
+metrics.summarize_history_for_loss('model_loss_plot.png')
 metrics.print_accuracy()
 metrics.print_loss()

@@ -1,6 +1,8 @@
 import numpy as np
 
 TRAIN_DATA_DIRECTORY = 'C:/Users/Deeathex/PycharmProjects/RealTimeSignLanguageRecognition/TrainData/'
+VALIDATION_DATA_DIRECTORY = 'C:/Users/Deeathex/PycharmProjects/RealTimeSignLanguageRecognition/ValidationData/'
+TEST_DATA_DIRECTORY = 'C:/Users/Deeathex/PycharmProjects/RealTimeSignLanguageRecognition/TestData/'
 MODEL_METRICS_DIRECTORY = 'C:/Users/Deeathex/PycharmProjects/RealTimeSignLanguageRecognition/ModelMetrics/'
 SAVED_IMAGES_DIRECTORY = 'C:/Users/Deeathex/PycharmProjects/RealTimeSignLanguageRecognition/SavedImages/'
 HISTOGRAM_DIRECTORY = 'C:/Users/Deeathex/PycharmProjects/RealTimeSignLanguageRecognition/Histogram/'

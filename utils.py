@@ -5,7 +5,6 @@ import pickle
 
 import pyttsx3
 from gtts import gTTS
-from pygame import mixer
 import playsound
 from random import randint
 
@@ -53,6 +52,18 @@ def get_letter_based_on_prediction(result):
     return letter
 
 
+def get_correct_character_for_special_characters(current_result):
+    if current_result == '[':
+        current_result = '['
+    elif current_result == '\\':  # ] = Â
+        current_result = ']'
+    elif current_result == '^':  # _ = space
+        current_result = '_'
+    elif current_result == ']':  # ^ = enter
+        current_result = '^'
+    return current_result
+
+
 def get_prediction(test_image, classifier):
     """
     Gives a result based on the CNN model
@@ -68,14 +79,14 @@ def get_prediction(test_image, classifier):
 
 def save_image_from_frame(image_to_save, image_filename, image_format='.JPG'):
     image_to_be_saved = cv2.resize(image_to_save, (50, 50))
-    cv2.imwrite(constant.SAVED_IMAGES_DIRECTORY + image_filename + image_format,
+    cv2.imwrite(constant.SAVED_IMAGES_DIRECTORY + str(image_filename) + image_format,
                 image_to_be_saved)
 
 
 def flip_images_from(directory, images_format='.JPG', start_name_image=2500):
     """
     Flips all images vertical (Oy axis) from the given directory
-    :param directory: directory with containing images
+    :param directory: directory path with containing images
     :param images_format: one of JPG, PNG, JPEG, etc
     :param start_name_image: the number to start image indexing, as an example, the first would be 2500.JPG, the second
     2501.JPG, etc
@@ -226,29 +237,65 @@ def say_text_romanian(text, is_voice_on):
     :param is_voice_on: A flag that shows if the voice is on (True) or off (False)
     :return: -
     """
-    while True:
-        try:
-            random_number = randint(0, 10000000)
-            audio_filename = constant.AUDIO_FILES_DIRECTORY + str(random_number) + 'text_to_voice.mp3'
-            if not is_voice_on:
-                return
-            tts = gTTS(text, lang='ro')
-            tts.save(audio_filename)
+    if text != '':
+        while True:
+            try:
+                random_number = randint(0, 10000000)
+                audio_filename = constant.AUDIO_FILES_DIRECTORY + str(random_number) + 'text_to_voice.mp3'
+                if not is_voice_on:
+                    return
+                tts = gTTS(text, lang='ro')
+                tts.save(audio_filename)
 
-            # mixer.init()
-            # mixer.music.load(audio_filename)
-            # mixer.music.play()
-            playsound.playsound(audio_filename, True)
-            os.remove(audio_filename)
-            break
-        except PermissionError:
-            pass
+                # mixer.init()
+                # mixer.music.load(audio_filename)
+                # mixer.music.play()
+                playsound.playsound(audio_filename, True)
+                os.remove(audio_filename)
+                break
+            except PermissionError:
+                pass
 
 
 def show_blackboard_with_text(img, text, is_voice_on):
-    # cv2.putText(img, text, (0, 470), cv2.QT_FONT_NORMAL, 1, (255, 255, 255))
-    cv2.putText(img, text, (0, 470), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255))
+    cv2.putText(img, 'Gestures must be held inside the black square area until recognized.', (0, 15),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.5, (255, 255, 255))
+    cv2.putText(img, 'Options: V - voice on/off; L - romanian/english on; S - save gesture', (0, 30),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.5, (255, 255, 255))
+
+    cv2.putText(img, 'Text: ', (0, 470), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255))
+    cv2.putText(img, text, (40, 470), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255))
     if is_voice_on:
-        cv2.putText(img, "Voice on", (470, 460), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 127, 0))
+        cv2.putText(img, "Voice on", (482, 445), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 127, 0))
     else:
-        cv2.putText(img, "Voice off", (470, 460), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 127, 0))
+        cv2.putText(img, "Voice off", (480, 445), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 127, 0))
+
+
+def show_blackboard_with_english_option(img, english_on):
+    if english_on:
+        cv2.putText(img, "English on", (448, 470), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 127, 0))
+    else:
+        cv2.putText(img, "Romanian on", (400, 470), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 127, 0))
+
+
+def convert_to_printable(letter):
+    """
+    Returns a printable letter. In case the letter is on of the diacritics, it cannot be shown as it is
+    on the screen, so it should be converted according to the rules {Ă,Â}->{A}, {Î}->{I}, {Ș}->{S}, {Ț}->{T}.
+    :param letter: the letter that would be printed on screen
+    :return: the letter that is printable
+    """
+    current_result = ''
+    if letter == 'Ă' or letter == 'Â':
+        current_result = 'A'
+    elif letter == 'Î':
+        current_result = 'I'
+    elif letter == 'Ș':
+        current_result = 'S'
+    elif letter == 'Ț':
+        current_result = 'Ț'
+    else:
+        return letter
+    return current_result
